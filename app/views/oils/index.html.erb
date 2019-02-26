@@ -1,6 +1,8 @@
 <%@oils.each do |oil| %>
   <h1><%= oil.name %></h1>
   <p><%= oil.note %></p>
+  <p><%= link_to "En savoir plus", oil_path(oil) %></p>
 <% end %>
 
+<%= link_to "Ajouter une huile", new_oil_path %>
 <%= link_to "Accueille", root_path %>
