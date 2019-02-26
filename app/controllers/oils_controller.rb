@@ -6,4 +6,37 @@ class OilsController < ApplicationController
   def show
     @oil = Oil.find(params[:id])
   end
+
+  def new
+    @oil = Oil.new
+  end
+
+  def create
+    @oil = Oil.new(oil_params)
+    @oil.save
+    redirect_to oils_path
+  end
+
+  def edit
+    @oil = Oil.find(params[:id])
+  end
+
+
+  def update
+    @oil = Oil.find(params[:id])
+    @oil.update(oil_params)
+    redirect_to oils_path
+  end
+
+  def destroy
+    @oil = Oil.find(params[:id])
+    @oil.destroy
+    redirect_to oils_path
+  end
+
+  private
+
+  def oil_params
+    params.require(:oil).permit(:name, :note)
+  end
 end
