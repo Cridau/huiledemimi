@@ -1,0 +1,30 @@
+.card-oil{
+  position:relative;
+  .inside-card-oil{
+    margin-bottom:30px;
+    height:250px;
+    .name-oil{
+      position:absolute;
+      left:20px;
+    }
+    .note-oil{
+      position:absolute;
+      bottom:20px;
+      left:20px;
+    }
+  }
+  .link{
+    display:flex;
+    position:relative;
+    width:275px;
+    .add{
+      padding:5px;
+      margin:5px;
+    }
+    .welcome{
+      padding:5px;
+      margin:5px;
+    }
+  }
+}
+
