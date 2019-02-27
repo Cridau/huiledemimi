@@ -1,8 +1,29 @@
 <%@oils.each do |oil| %>
-  <h1><%= oil.name %></h1>
-  <p><%= oil.note %></p>
-  <p><%= link_to "En savoir plus", oil_path(oil) %></p>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <h1><%= oil.name %></h1>
+        <p><%= oil.note %></p>
+        <%= link_to "En savoir plus", oil_path(oil) %>
+        <!-- insert <div class="card"> -->
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <h1><%= oil.name %></h1>
+        <p><%= oil.note %></p>
+        <%= link_to "En savoir plus", oil_path(oil) %>
+        <!-- insert <div class="card"> -->
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <h1><%= oil.name %></h1>
+        <p><%= oil.note %></p>
+        <%= link_to "En savoir plus", oil_path(oil) %>
+        <!-- insert <div class="card"> -->
+      </div>
+    </div>
+  </div>
 <% end %>
+
 
 <%= link_to "Ajouter une huile", new_oil_path %>
 <%= link_to "Accueille", root_path %>
