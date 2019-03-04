@@ -1,8 +1,7 @@
-.card-oil{
-  position:relative;
-  .inside-card-oil{
-    margin:30px;
-    height:250px;
+a{
+  margin:15px;
+  height:250px;
+  border-radius:3px;
     .name-oil{
       position:absolute;
       left:20px;
@@ -12,38 +11,46 @@
       bottom:20px;
       left:20px;
     }
-  }
-  .link{
-    display:flex;
-    position:relative;
-    width:275px;
-    .add a{
-      border:1px solid #1bc426;
-      background-color:#1bc426;
-      border-radius:5px;
-      padding:5px;
-      margin:5px;
-      color:white;
-      color:white;
-      text-decoration:none;
-    } .add a:hover{
-      color:#707172;
-      background-color:#1bc439;
-    }
-
-    .welcome a{
-      border-radius:5px;
-      border:1px solid #12dde8;
-      background-color:#12dde8;
-      padding:5px;
-      margin:5px;
-      color:white;
-      text-decoration:none;
-    } .welcome a:hover{
-      color:#707172;
-      background-color:#12ddf0;
-    }
-  }
 }
 
+a:hover{
+  text-decoration:none;
+  border:solid 1px green;
+  box-shadow:1px 1px 1px green;
+}
+
+.col-xs-12{
+  background-image:url(home.jpg);
+}
+
+.link{
+  display:flex;
+  // position:relative;
+  .add a{
+    border:1px solid #1bc426;
+    background-color:#1bc426;
+    border-radius:5px;
+    padding:5px;
+    margin:5px;
+    color:white;
+    color:white;
+    text-decoration:none;
+  } .add a:hover{
+    color:#707172;
+    background-color:#1bc439;
+  }
+
+  .welcome a{
+    border-radius:5px;
+    border:1px solid #12dde8;
+    background-color:#12dde8;
+    padding:5px;
+    margin:5px;
+    color:white;
+    text-decoration:none;
+  } .welcome a:hover{
+    color:#707172;
+    background-color:#12ddf0;
+  }
+}
 
