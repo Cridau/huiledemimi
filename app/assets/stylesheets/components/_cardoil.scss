@@ -1,7 +1,7 @@
 .card-oil{
   position:relative;
   .inside-card-oil{
-    margin-bottom:30px;
+    margin:30px;
     height:250px;
     .name-oil{
       position:absolute;
@@ -17,13 +17,29 @@
     display:flex;
     position:relative;
     width:275px;
-    .add{
+    .add a{
+      border:1px solid #1bc426;
+      background-color:#1bc426;
+      border-radius:5px;
       padding:5px;
       margin:5px;
+      color:white;
+      color:white;
+      text-decoration:none;
+    } .add a:hover{
+      color:#707172;
     }
-    .welcome{
+
+    .welcome a{
+      border-radius:5px;
+      border:1px solid #12dde8;
+      background-color:#12dde8;
       padding:5px;
       margin:5px;
+      color:white;
+      text-decoration:none;
+    } .welcome a:hover{
+      color:#707172;
     }
   }
 }
