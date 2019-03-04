@@ -3,4 +3,20 @@
 @import "navbar";
 @import "banner";
 @import "card";
-@import "cardoil"
+@import "cardoil";
+
+h1{
+  font-family: 'Satisfy', cursive;
+  padding:20px;
+  text-align:center;
+  font-size:70px;
+}
+
+h2{
+  font-family: 'Satisfy', cursive;
+  color:#333333;
+}
+
+p{
+  color:#333333;
+}
