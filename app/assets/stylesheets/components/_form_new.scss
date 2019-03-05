@@ -1,0 +1,25 @@
+.new_oil{
+  display:flex;
+  position:absolute;
+  flex-direction:column;
+  width:300px;
+  margin-top:15%;
+  left:40%;
+}
+.new_oil a {
+  width:300px;
+  height:39px;
+  margin-top:5px;
+  margin-left:0px;
+  border:solid 1px #ffa41c;
+  background-color:#ffa41c;
+}
+.new_oil a:hover{
+  background-color:#ffa43d;
+  color:#707172;
+}
+
+.new_oil input:hover{
+  box-shadow:1px 1px 1px green;
+  color:#707172;
+}

@@ -4,6 +4,12 @@
 @import "banner";
 @import "card";
 @import "cardoil";
+@import "form_new";
+
+body{
+  position:relative;
+  margin: 0 auto;
+}
 
 h1{
   font-family: 'Satisfy', cursive;
