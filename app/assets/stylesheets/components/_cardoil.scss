@@ -1,7 +1,11 @@
 a{
+  // position:absolute;
   margin:15px;
   height:250px;
   border-radius:3px;
+  // top:50%;
+  left:10%;
+  // transform: translateX(-150%);
     .name-oil{
       position:absolute;
       left:20px;
@@ -26,6 +30,7 @@ a:hover{
 .link{
   display:flex;
   // position:relative;
+  margin-left:11%;
   .add a{
     border:1px solid #1bc426;
     background-color:#1bc426;
