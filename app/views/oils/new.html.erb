@@ -1,3 +1,4 @@
+<h1>Ajouter une nouvelle huile</h1>
 <%= form_for(@oil) do |f| %>
   <div class="form-group">
     <%= f.label :name %>
@@ -10,6 +11,6 @@
   </div>
 
   <%= f.submit "Créer", class: 'btn btn-primary' %>
+  <%= link_to "Retour", oils_path, class: 'btn btn-primary' %>
 <% end %>
 
-<%= link_to "Retour", oils_path %>
