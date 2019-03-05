@@ -1,5 +1,5 @@
 <h1><%= @oil.name %></h1>
-<p><%= @oil.note %></p>
+<p><%= @oil.note %>/5</p>
 
 <%= form_for(@oil) do |f| %>
   <div class="form-group">
@@ -13,11 +13,11 @@
   </div>
 
   <%= f.submit "Modifier", class: 'btn btn-primary' %>
+  <%= link_to "Suprimer", oil_path(@oil),
+        method: :delete,
+        data: { confirm: "Etes vous sûrs?" },class: 'btn btn-primary' %>
+
+  <%= link_to "Les Huiles", oils_path,class: 'btn btn-primary'%>
 
 <% end %>
 
-<%= link_to "Suprimer", oil_path(@oil),
-      method: :delete,
-      data: { confirm: "Etes vous sûrs?" } %>
-
-<%= link_to "Les Huiles", oils_path%>
