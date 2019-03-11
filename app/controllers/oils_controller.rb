@@ -29,7 +29,7 @@ class OilsController < ApplicationController
     if @oil.update(oil_params)
       redirect_to oils_path
     else
-      redirect_to oil_path
+      render :show
     end
   end
 
