@@ -2,6 +2,17 @@
 <p><%= @oil.note %>/5</p>
 
 <%= form_for(@oil) do |f| %>
+
+  <% if @oil.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @oil.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %>

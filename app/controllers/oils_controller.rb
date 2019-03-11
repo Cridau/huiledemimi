@@ -13,19 +13,24 @@ class OilsController < ApplicationController
 
   def create
     @oil = Oil.new(oil_params)
-    @oil.save
-    redirect_to oils_path
+    if @oil.save
+      redirect_to oils_path
+    else
+      render :new
+    end
   end
 
   def edit
     @oil = Oil.find(params[:id])
   end
 
-
   def update
     @oil = Oil.find(params[:id])
-    @oil.update(oil_params)
-    redirect_to oils_path
+    if @oil.update(oil_params)
+      redirect_to oils_path
+    else
+      redirect_to oil_path
+    end
   end
 
   def destroy
