@@ -7,10 +7,12 @@ a{
   left:10%;
   // transform: translateX(-150%);
     .name-oil{
+      z-index:1;
       position:absolute;
       left:20px;
     }
     .note-oil{
+      z-index:1;
       position:absolute;
       bottom:20px;
       left:20px;
@@ -24,7 +26,14 @@ a:hover{
 }
 
 .col-xs-12{
-  background-image:url(home.jpg);
+  display:flex;
+
+  .photo img{
+    position:absolute;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2));
+    border-radius:5px;
+    left:0px;
+  }
 }
 
 .link{

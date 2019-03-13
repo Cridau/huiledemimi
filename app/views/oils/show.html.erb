@@ -1,6 +1,11 @@
 <h1><%= @oil.name %></h1>
 <p><%= @oil.note %>/5</p>
-
+<% if @oil.photo.present? %>
+  <%= cl_image_tag @oil.photo, height: 300, width: 400, crop: :fill %>
+  <% else %>
+  <%= cl_image_tag("m4irledchhkdafokueav",
+      width: 400, height: 300, crop: :fill) %>
+<% end %>
 <%= form_for(@oil) do |f| %>
 
   <% if @oil.errors.any? %>
