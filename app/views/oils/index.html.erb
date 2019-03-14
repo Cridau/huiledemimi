@@ -17,10 +17,10 @@
         </div>
         <div class="photo">
           <% if oil.photo.present? %>
-            <%= cl_image_tag oil.photo, height: 249, width: 275, crop: :fill %>
+            <%= cl_image_tag oil.photo, height: 249, width: 380, crop: :fill %>
             <% else %>
             <%= cl_image_tag("m4irledchhkdafokueav",
-                width: 275, height: 249, crop: :fill) %>
+                width: 380, height: 249, crop: :fill) %>
           <% end %>
         </div>
     <% end %>
