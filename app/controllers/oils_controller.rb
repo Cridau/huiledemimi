@@ -42,6 +42,6 @@ class OilsController < ApplicationController
   private
 
   def oil_params
-    params.require(:oil).permit(:name, :note, :photo)
+    params.require(:oil).permit(:name, :note, :photo, :article)
   end
 end
