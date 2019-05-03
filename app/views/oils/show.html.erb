@@ -6,15 +6,49 @@
     <div class="note">
       <p><%= @oil.note %>/5</p>
     </div>
-    <div class="foto">
       <% if @oil.photo.present? %>
         <%= cl_image_tag @oil.photo, height: 300, width: 400, crop: :fill %>
         <% else %>
         <%= cl_image_tag("m4irledchhkdafokueav",
             width: 400, height: 300, crop: :fill) %>
       <% end %>
-    </div>
   </div>
+  <%= form_for(@oil) do |f| %>
+
+    <% if @oil.errors.any? %>
+      <div class="errors-container">
+        <ul>
+          <% @oil.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :note %>
+      <%= f.text_field :note, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :article %>
+      <%= f.text_area :article, class: 'form-control' %>
+    </div>
+
+    <%= f.submit "Modifier", class: 'btn btn-primary' %>
+    <%= link_to "Suprimer", oil_path(@oil),
+          method: :delete,
+          data: { confirm: "Etes vous sûrs?" },class: 'btn btn-primary' %>
+
+    <%= link_to "Les Huiles", oils_path,class: 'btn btn-primary'%>
+
+  <% end %>
+
   <div class="article">
     <% if @oil.article.present? %>
       <p><%= @oil.article %></p>
@@ -24,39 +58,4 @@
   </div>
 </div>
 
-<%= form_for(@oil) do |f| %>
-
-  <% if @oil.errors.any? %>
-    <div class="errors-container">
-      <ul>
-        <% @oil.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :note %>
-    <%= f.text_field :note, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :article %>
-    <%= f.text_area :article, class: 'form-control' %>
-  </div>
-
-  <%= f.submit "Modifier", class: 'btn btn-primary' %>
-  <%= link_to "Suprimer", oil_path(@oil),
-        method: :delete,
-        data: { confirm: "Etes vous sûrs?" },class: 'btn btn-primary' %>
-
-  <%= link_to "Les Huiles", oils_path,class: 'btn btn-primary'%>
-
-<% end %>
 
