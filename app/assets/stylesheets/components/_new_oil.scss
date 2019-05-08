@@ -1,10 +1,11 @@
 .new_oil{
   display:flex;
   position:absolute;
+  justify-content:space-between;
   flex-direction:column;
   width:300px;
   margin-top:15%;
-  top:10%;
+  top:-10%;
   left:50%;
   transform: translateX(-50%);
 }
@@ -24,4 +25,18 @@
 .new_oil input:hover{
   box-shadow:1px 1px 1px green;
   color:#707172;
+}
+
+.block h1{
+  position:relative;
+}
+
+#oil_photo_cache{
+  display:none;
+}
+
+@media all and (max-width: 1080px) {
+  .new_oil{
+    top:15%;
+  }
 }
